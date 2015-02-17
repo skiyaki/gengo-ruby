@@ -1,13 +1,12 @@
 module Gengo
   # Base Exception class and such.
   class Gengo::Exception < ::StandardError
-    attr_accessor :opstat, :code, :msg
+    attr_accessor :opstat, :message
 
     # Pretty self explanatory stuff here...
-    def initialize(opstat, code, msg)
+    def initialize(opstat, message)
       @opstat = opstat
-      @code = code
-      @msg = msg
+      @message = message
     end
   end
 end
